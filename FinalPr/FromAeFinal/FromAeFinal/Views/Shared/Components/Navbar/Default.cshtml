@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Default";
+}
+
+@foreach(var item in Model)
+{
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=item.Id})">@item.Name</a>
+    </li>
+}
+
+

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AdminPanel">
+    <meta name="author" content="Ramazanov">
+    <title>Dashio - Bootstrap Admin Template</title>
+    <link href="~/forAdmin/img/favicon.png" rel="icon">
+    <link href="~/forAdmin/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="~/forAdmin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/forAdmin/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/forAdmin/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="~/forAdmin/lib/gritter/css/jquery.gritter.css" />
+    <link href="~/forAdmin/css/style-responsive.css" rel="stylesheet">
+    <link href="~/forAdmin/css/style.css" rel="stylesheet">
+
+    <script src="~/forAdmin/lib/chart-master/Chart.js"></script>
+</head>
+
+<body>
+    <section id="container" class="container">
+
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+
+            <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+
+            <div class="nav notify-row" id="top_menu">
+
+            </div>
+            <div class="top-menu">
+                <ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </header>
+       
+        <div class="row" style="margin-right:0;">
+
+            <aside class="col-3">
+                <div id="sidebar" class="nav-collapse ">
+                    <!-- sidebar menu start-->
+                    <ul class="sidebar-menu" id="nav-accordion">
+
+
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Menus" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Menu</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="SubMenus" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+
+
+                                <span>Submenu</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Products" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Categories" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Categories</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Comments" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Comments</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Markas" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Markas</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Models" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Models</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Images" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Images</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="ProductCategories" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>ProductCategories</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="ProductProperties" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>ProductProperties</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Properties" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Properties</span>
+                            </a>
+                        </li>
+                        <li class="mt">
+                            <a class="active" asp-action="Index" asp-controller="Ratings" asp-area="Admin">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Ratings</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </aside>
+
+            <aside class="col-9 adminPanel" style="margin-left:240px; margin-top:80px;">
+                @RenderBody()
+            </aside>
+        </div>
+       
+
+    </section>
+   
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<Product>
+
+<div class="products-page">
+
+    <div class="container product-filter mt-4">
+
+        <div class="d-flex flex-wrap mb-4">
+
+            <div class="col-12 col-lg-3">
+                <div class="filter-bar ">
+                    <div class="">
+                        <h5>Qiymeti</h5>
+                    </div>
+                    <div id="slider-range"></div>
+                    <p class="">
+                        <label for="amount">Price range:</label>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                    <div class="money-filter">
+                        <button class="btn btn-dark ">Filter</button>
+                    </div>
+
+                </div>
+
+                <div class="mt-5 checkboxs">
+                    <h5>ISTEHSALCI</h5>
+                    <ul id="manufacturer_filter-orig-data">
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>HP</label>
+                            </a>
+                            (69)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Asus</label>
+                            </a>
+                            (60)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Lenovo</label>
+                            </a>
+                            (46)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Microsoft</label>
+                            </a>
+                            (19)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Apple</label>
+                            </a>
+                            (16)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Dell</label>
+                            </a>
+                            (14)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Acer</label>
+                            </a>
+                            (14)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>MSI</label>
+                            </a>
+                            (13)
+                        </li>
+                        <li class="attr-filter">
+                            <a href="#" class="filter-link">
+                                <input type="checkbox" onclick="this.parentNode.click();">
+                                <label>Xiaomi</label>
+                            </a>
+                            (2)
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="col-12 col-lg-9">
+                @foreach (var item in ViewBag.Name)
+                {
+                    <h4>@item</h4>
+                    break;
+                }
+
+                <img src="images/Banner_Laptop_AZ.jpg" alt="">
+
+                <div class="filter-icon mt-3">
+
+
+                    <ul class="d-flex justify-content-around">
+                        <li>Lowest price <i class="fa fa-sort-amount-down-alt"></i></li>
+                        <li>Highest price <i class="fa fa-sort-amount-down"></i></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="card col-12 col-md-4 col-lg-4 mb-4" style="width: 18rem;">
+                            <img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Name</h5>
+                                <div class="d-flex justify-content-between">
+                                    <div class="percent">
+                                        <p>@item.Discount</p>
+                                    </div>
+                                    <div>
+                                        <del class="text-muted">@item.SalePrice</del>
+                                        <p class="font-weight-bold">$ @item.Price</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            values: [0, 5000],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+    });
+</script>

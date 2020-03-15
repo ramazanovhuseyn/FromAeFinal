@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Default";
+}
+@foreach (var item in Model)
+{
+    <li>
+        <a href="@item.Url">@item.Name</a>
+
+        <div class="container test">
+            <div class="row">
+                <div class="plus position-absolute" style="left:20px;  padding-top:12px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 left-side">
+                                <ul class="position-relative">
+                                    @foreach (SubMenu subMenu in item.SubMenus)
+                                    {
+                                        <li><input type="hidden" value=@subMenu.Id /> <a class="submenu-item" href="@Url.Action("index","CategoriesPage",new { id=subMenu.Id})" >@subMenu.Name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="col-md-9 right-side position">
+                                <div class="container">
+                                    <div class="row">
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+}
+

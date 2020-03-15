@@ -1,0 +1,221 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c2953f0e86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- scroll-top -->
+
+    <a id="button"></a>
+
+    <!-- scroll-top -->
+    <!--Navbar-->
+    <nav class="navbar navbar-light purple lighten-4">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Categories</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler toggler-example purple darken-3" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent41">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                @*<li class="nav-item active">
+                    <a class="nav-link" href="#">ELEKTRONİKA<span class="sr-only">(current)</span></a>
+                </li>*@
+               @await Component.InvokeAsync("Navbar")
+                
+            </ul>
+            <!-- Links -->
+
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+
+    <header class="container-fluid">
+        <div class="contaiener-fluid for-background">
+            <div class="container">
+                <div class="head-top row">
+                    <div class="col-md-12 col-lg-6 left col-sm-12 col-12">
+                        <ul>
+                            <li><i class="fas fa-phone"></i><a href="/">+994 51 488 04 42</a></li>
+                            <li><i class="fab fa-hire-a-helper"></i><a href="/">Yardim Merkezi</a></li>
+                            <li><i class="fas fa-clipboard-list"></i><a href="/">Sifarishi izlemek</a></li>
+                            <li><i class="fas fa-bell"></i><a href="/">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 right right-media col-lg-6 col-sm-12 col-12">
+                        <img src="/img/az_payment_methods.png">
+                        <select class="selectpicker">
+                            <option>Azerbaijan</option>
+                            <option>Русский</option>
+                            </optgroup>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="head-middle row">
+                <div class="col-md-4 col-sm-4 col-4 col-lg-2">
+                    <img src="/img/logo-head.png">
+                </div>
+                <div class="col-md-4 col-sm-4 col-4 col-lg-8">
+                    <input class="form-control form-control-sm" type="search"
+                           placeholder="Search for products, categories">
+                </div>
+                <div class="col-md-4 col-sm-4 col-4 col-lg-2">
+                    <a href="/"><i class="fas fa-user"></i></a>
+                    <a href="/"><i class="fas fa-drum"></i></a>
+                    <a href="/"><i class="fas fa-comments"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row categories">
+            <div class="container-fluid head-b-fluid">
+                <div class="container">
+                    <div class="head-bottom row">
+                        <div class="col-md-12">
+                            <ul class="new-block">
+                                <li class="">
+
+                                </li>
+                                @await Component.InvokeAsync("Menu")
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="container-fluid">
+            <div class="row border-footer">
+                <div class="col-md-3">
+                    <h4>Istifadecilere</h4>
+                    <ul>
+                        <li><a href="">Sifarişlərim</a></li>
+                        <li><a href="">Hesabım</a></li>
+                        <li><a href="">Xəbərlərim</a></li>
+                        <li><a href="">Zəmanət</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Informasiya</h4>
+                    <ul>
+                        <li><a href="">Haqqımızda</a></li>
+                        <li><a href="">Bizimlə əlaqə</a></li>
+                        <li><a href="">Çatdırılma</a></li>
+                        <li><a href="">Ödənişlər</a></li>
+                        <li><a href="">Göndərmə qaydaları</a></li>
+                        <li><a href="">Xidmət şərtələri</a></li>
+                        <li><a href="">Sifarış və geri qaytarma</a></li>
+                        <li><a href="">Sual Cavab?</a></li>
+                        <li><a href="">Axtarış</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Əlaqə məlumatı</h4>
+                    <ul>
+                        <li><a href="">Email:support@from.ae</a></li>
+                        <li><a href="">Mobil:+99470 311 00 00</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Yenilikler</h4>
+                    <p>Yeniliklərə Abunə Ol:</p>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                               placeholder="Enter email">
+                    </div>
+                    <button class="btn btn-dark">Abune ol</button>
+                </div>
+            </div>
+            <div class="row social">
+                <ul class="socials">
+                    <li><a href="/"><img src="/img/social/google.png"></a></li>
+                    <li><a href="/"><img src="/img/social/facebook.png"></a></li>
+                    <li><a href="/"><img src="/img/social/twitter.png"></a></li>
+                    <li><a href="/"><img src="/img/social/watsup.png"></a></li>
+                    <li><a href="/"><img src="/img/social/vk.png"></a></li>
+                    <li><a href="/"><img src="/img/social/instagram.png"></a></li>
+                </ul>
+            </div>
+            <div class="row fooot">
+                <div class="foot-end">
+                    <ul>
+                        <li><a href="/">Axtarış sorğuları</a></li>
+                        <li><a href="/">Etrafli Axtarish</a></li>
+                        <li><a href="/">Sifarış və geri qaytarma</a></li>
+                        <li><a href="/">Bizimlə əlaqə</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".submenu-item").hover(function () {
+                let submenuId = $(this).prev().val();
+                let rightContent = $(this).parents('.left-side');
+                $.ajax({
+                    url: '/Ajax/GetCategoriesById',
+                    method: 'POST',
+                    data: { id: submenuId },
+                    success: function (response) {
+                        console.log(response);
+                        console.log(rightContent.next());
+                        rightContent.next().children('.container').children('.row').html(response);
+                    }
+                })
+            })
+        })
+    </script>
+  
+</body>
+
+</html>

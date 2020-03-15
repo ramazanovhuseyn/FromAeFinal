@@ -1,0 +1,504 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.owl-nav {
+  display: none;
+}
+
+header {
+  background-color: #fafafa;
+  border-top: 5px solid #e31e24;
+}
+
+header .head-top {
+  padding-top: 8px;
+}
+
+header .head-top ul {
+  padding: 0;
+}
+
+header .head-top li {
+  display: inline-block;
+  padding-left: 2%;
+}
+
+header .head-top li i {
+  padding-right: 3px;
+  font-size: .8em;
+}
+
+header .head-top i {
+  color: #d86f6f;
+}
+
+header .head-top a {
+  color: black;
+  font-style: none;
+  font-size: .7em;
+}
+
+header .head-top .right {
+  padding-left: 17%;
+}
+
+header .head-middle img {
+  width: 70%;
+}
+
+header .head-middle i {
+  font-size: 1.5em;
+  color: #b8b8b8;
+  margin-left: 5px;
+}
+
+header .head-bottom {
+  background-color: #888;
+}
+
+header .head-bottom .new-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: .4em;
+}
+
+header .head-bottom .new-block li {
+  list-style-type: none;
+}
+
+header .head-bottom .new-block li a {
+  color: white;
+  font-size: 100%;
+}
+
+header .head-bottom .new-block li:hover .plus {
+  display: block;
+}
+
+header .head-bottom .plus {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 500px;
+  background-color: #888;
+}
+
+header .head-bottom .plus .left-side ul {
+  padding-left: 0;
+  padding-top: 1em;
+}
+
+header .head-bottom .plus .left-side ul li a {
+  font-size: .8em;
+}
+
+header .head-b-fluid {
+  background-color: #888;
+  margin-top: 1em;
+}
+
+.products-first {
+  margin-top: 1em;
+}
+
+.products-first .categ-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products-first .categ-4 a {
+  font-size: .7em;
+}
+
+.products-first ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.products-first ul li {
+  list-style-type: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 7px;
+}
+
+.products-first ul li a {
+  color: #888;
+  font-weight: 500;
+}
+
+.products-first .border-for-phones {
+  padding: 30px;
+  border: 1px solid #b8b8b8;
+}
+
+.products-first .more-product {
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products-first .more-product a {
+  border: 2px solid silver;
+  padding: 13px;
+  border-radius: 30px;
+  color: #8d8d8d;
+}
+
+.products-first .product-box {
+  padding: 5px;
+}
+
+.products-first .product-box #thiss {
+  display: none;
+}
+
+.products-first .product-box img {
+  width: 100%;
+  padding-top: 5%;
+}
+
+.products-first .product-box p {
+  margin: 0;
+  margin-left: 12%;
+}
+
+.products-first .product-box .name {
+  margin-top: 3%;
+}
+
+.products-first .product-box .disc {
+  padding: 5px;
+  background-color: red;
+  border-radius: 60%;
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 67%;
+  font-size: 1.3em;
+}
+
+.products-first .product-box .price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.products-first .card_content {
+  margin-left: 38px;
+  margin-top: 30px;
+}
+
+.products-first .card_content div a {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #909090;
+}
+
+.products-first .card_content div p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  padding-top: 15px;
+}
+
+.parfume {
+  margin-bottom: 3em;
+}
+
+.parfume .left p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #4646ce;
+}
+
+.parfume ul {
+  padding-left: 0;
+}
+
+.parfume ul li {
+  border-bottom: 1px solid #8f8f8f;
+  padding: 5px;
+  background-color: whitesmoke;
+  list-style-type: none;
+}
+
+.parfume ul li a {
+  color: black;
+  font-size: .8em;
+}
+
+.parfume img {
+  width: 100%;
+}
+
+.parfume-new .woman div a {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3CABDA;
+  text-decoration: none;
+}
+
+.parfume-new .woman div ul li {
+  list-style: none;
+  line-height: 20px;
+}
+
+.parfume-new .woman div ul li a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eeeeee;
+  display: block;
+}
+
+.parfume-new .woman div ul li:last-child a {
+  color: #3CABDA;
+}
+
+.parfume-new .woman_parfume {
+  height: 230px;
+  width: 100%;
+  border-left: 0;
+  border-top: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.parfume-new .woman_parfume a:first-child {
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 0 10px;
+  margin-left: 20px;
+}
+
+.parfume-new .woman_parfume a img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.parfume-new .owl-nav {
+  display: none;
+}
+
+.parfume-new .woman_parfume a:nth-child(2) {
+  color: #666666;
+  line-height: 20px;
+  display: block;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.parfume-new .woman_parfume p {
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  color: #333;
+}
+
+footer {
+  border-top: 1px solid #c4c4c4;
+  padding-top: 20px;
+  padding-left: 0;
+  background-color: #eee;
+}
+
+footer .border-footer {
+  border-bottom: 1px solid #eee;
+}
+
+footer ul {
+  padding-left: 6%;
+}
+
+footer ul li {
+  list-style-type: circle;
+}
+
+footer ul li a {
+  font-size: .8em;
+}
+
+footer ul a:hover {
+  padding-left: 5px;
+}
+
+footer .social .socials {
+  padding-left: 40%;
+}
+
+footer .social .socials li {
+  display: inline;
+}
+
+footer .social .socials li img {
+  width: 5%;
+}
+
+footer .fooot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .foot-end ul {
+  padding-left: 0;
+}
+
+footer .foot-end ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer .foot-end ul li a {
+  text-align: center;
+  color: black;
+  font-size: .8em;
+  padding: 5px;
+}
+
+.navbar {
+  background-color: #e31e24;
+  display: none;
+}
+
+.navbar button {
+  float: right;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .right-media {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .categories {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .parfume .owl-carousel p {
+    font-size: .45em !important;
+  }
+}
+
+@media screen and (max-width: 442px) {
+  .parfume .owl-carousel p {
+    font-size: .55em;
+  }
+  .head-top .left ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .head-top .left a {
+    display: none;
+  }
+  .head-middle .col-md-4 {
+    padding: 0;
+    padding-bottom: 1em !important;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .products-first a {
+    font-size: .5em !important;
+  }
+}
+
+#button {
+  display: inline-block;
+  background-color: #e31e24;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  -webkit-transition: background-color .3s, 
+ opacity .5s, visibility .5s;
+  transition: background-color .3s, 
+ opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

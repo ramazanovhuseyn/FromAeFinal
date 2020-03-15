@@ -1,0 +1,111 @@
+﻿
+@{
+    //ViewData["Title"] = "Index";
+
+}
+@model FromAeFinal.Models.Product
+
+<style>
+
+    .single-phone .rating {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+        .single-phone .rating .checked {
+            color: orange;
+        }
+
+    .single-phone .options span {
+        padding-right: 15px;
+    }
+
+    .single-phone table td {
+        padding: .4rem !important;
+    }
+
+    .single-phone button {
+        background-color: #e31e24 !important;
+    }
+</style>
+
+<div class="container single-phone mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/images/@Model.MainImage" class="w-100">
+        </div>
+        <div class="col-md-6">
+            <p>@Model.Name</p>
+            <div class="rating">
+                <p>$ @Model.Price</p>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
+
+            <div class="options pt-5">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Vəziyyəti:</td>
+                            <td>Yeni</td>
+                        </tr>
+                        <tr>
+                            <td>Göndəriş</td>
+                            <td>5-7 Gun</td>
+                        </tr>
+                        <tr>
+                            <td>Çatdirilma</td>
+                            <td>$ 22</td>
+                        </tr>
+                        <tr>
+                            <td>Zəmanət</td>
+                            <td>
+                                Yoxlamaq üçün 3 gün
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-danger">
+                Almaq
+            </button>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped col-6">
+            <tbody>
+                @foreach (var item1 in ViewBag.Property)
+                {
+                    <tr id="bu">
+                        <td>@item1</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table table-striped col-6">
+            <tbody>
+                @foreach (var item in ViewBag.PropertyValue)
+                {
+                    <tr>
+                        <td>@item</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
