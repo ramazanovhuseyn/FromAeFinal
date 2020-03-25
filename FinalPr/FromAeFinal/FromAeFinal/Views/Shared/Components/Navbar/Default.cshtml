@@ -3,11 +3,28 @@
     ViewData["Title"] = "Default";
 }
 
-@foreach(var item in Model)
-{
-    <li class="nav-item">
-        <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=item.Id})">@item.Name</a>
-    </li>
-}
 
-
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=12})">Elektronika</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=15})">Komputerlər</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=11})">Oyunlar</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=10})">Foto və Video</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=9})">Məişət Avadanlıqları</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=6})">Parfüm və Kosmetika</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Url.Action("index","CategoriesPage",new { id=2})">Ev Əşyaları</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="">Moda</a>
+</li>

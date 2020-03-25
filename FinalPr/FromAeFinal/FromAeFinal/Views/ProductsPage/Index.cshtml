@@ -27,76 +27,21 @@
                 </div>
 
                 <div class="mt-5 checkboxs">
-                    <h5>ISTEHSALCI</h5>
+                    <h5>istehsalci</h5>
                     <ul id="manufacturer_filter-orig-data">
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>HP</label>
-                            </a>
-                            (69)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Asus</label>
-                            </a>
-                            (60)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Lenovo</label>
-                            </a>
-                            (46)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Microsoft</label>
-                            </a>
-                            (19)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Apple</label>
-                            </a>
-                            (16)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Dell</label>
-                            </a>
-                            (14)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Acer</label>
-                            </a>
-                            (14)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>MSI</label>
-                            </a>
-                            (13)
-                        </li>
-                        <li class="attr-filter">
-                            <a href="#" class="filter-link">
-                                <input type="checkbox" onclick="this.parentNode.click();">
-                                <label>Xiaomi</label>
-                            </a>
-                            (2)
-                        </li>
+                        @foreach (var item in ViewBag.Istehsalci)
+                        {
+                            <li class="attr-filter">
+                                <a href="#" class="filter-link">
+                                    <input type="checkbox" onclick="this.parentNode.click();">
+                                    <label>@item</label>
+                                </a>
+                                (@ViewBag.Count)
+
+                            </li>
+                        }
                     </ul>
-
                 </div>
-
-
 
             </div>
 
@@ -128,7 +73,7 @@
                         <div class="card col-12 col-md-4 col-lg-4 mb-4" style="width: 18rem;">
                             <img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">@item.Name</h5>
+                                <a class="card-title" style="color:black;" href="@Url.Action("Index","singlePhone",new { id=item.Id})">@item.Name</a>
                                 <div class="d-flex justify-content-between">
                                     <div class="percent">
                                         <p>@item.Discount</p>

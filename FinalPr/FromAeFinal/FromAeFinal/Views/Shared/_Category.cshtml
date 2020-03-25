@@ -5,10 +5,10 @@
 
 @foreach (var item in Model)
 {
-    <div class="col-md-3">
+    <div class="col-md-3" >
         <div class="card" style="width: 100%;">
             <div class="card-body">
-                <a href="#" style="color:black;" class="card-text">@item.Name</a>
+                <a href="@Url.Action("index","ProductsPage",new { id=item.Id})" style="color:black;" class="card-text">@item.Name</a>
             </div>
             <img class="card-img-top" src="/images/@item.Image"
                  alt="Card image cap">

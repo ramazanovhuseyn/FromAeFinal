@@ -43,11 +43,11 @@
             </ul>
         </div>
 
-    </div>
+    </div>  
     <div class="row">
         @foreach (var item in Model.products.Where(x => x.ProductCategories.Any(y => y?.CategoryId == 1)))
         {
-            <div class="card card_content col-12 col-sm-5 col-md-3 col-lg-2 col-xl-2">
+            <div class="card card_content col-12 col-sm-5 col-md-3 col-lg-2 col-xl-2" style="margin-left:0px;">
                 <img class="card-img-top pb-2 pt-3" src="/images/@item.MainImage" alt="Card image cap">
                 <div class="card-body">
                     <a href="@Url.Action("index","singlePhone",new { id=item.Id})" class="card-title">@item.Name</a>
@@ -88,7 +88,7 @@
                                                       parfume_id = m.Id,
                                                   }).Distinct())
                             {
-                                <li><a href=""><i class="mdi mdi-play"></i>@item.parfume_name</a></li>
+                                <li><a href="@Url.Action("Index","ProductsPage",new { id = 43})"><i class="mdi mdi-play"></i>@item.parfume_name</a></li>
                             }
 
 
@@ -108,36 +108,24 @@
                         {
 
                             <div class="card woman_parfume">
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})"><img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap"></a>
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})">@item.Name</a>
+                                <p>$&nbsp;@item.Price</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="owl-carousel">
+                        @foreach (var item in Model.products.Where(x => x.ProductCategories.Any(y => y?.CategoryId == 43)))
+                        {
+
+                            <div class="card woman_parfume">
                                 <a href=""><img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap"></a>
                                 <a href="">@item.Name</a>
                                 <p>$&nbsp;@item.Price</p>
                             </div>
                         }
                     </div>
-                    <div class="owl-carousel">
-                        <div class="card woman_parfume">
-                            <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
-                            <a href="">Versace Medusa W Edp 30ml Spy</a>
-                            <p>$&nbsp;29</p>
-                        </div>
-                        <div class="card woman_parfume">
-                            <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
-                            <a href="">Versace Medusa W Edp 30ml Spy</a>
-                            <p>$&nbsp;29</p>
-                        </div>  <div class="card woman_parfume">
-                            <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
-                            <a href="">Versace Medusa W Edp 30ml Spy</a>
-                            <p>$&nbsp;29</p>
-                        </div>  <div class="card woman_parfume">
-                            <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
-                            <a href="">Versace Medusa W Edp 30ml Spy</a>
-                            <p>$&nbsp;29</p>
-                        </div>  <div class="card woman_parfume">
-                            <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
-                            <a href="">Versace Medusa W Edp 30ml Spy</a>
-                            <p>$&nbsp;29</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -171,7 +159,7 @@
                                                       notebook_id = m.Id,
                                                   }).Distinct())
                             {
-                                <li><a href=""><i class="mdi mdi-play"></i>@item.notebook_name</a></li>
+                                <li><a href="@Url.Action("Index","ProductsPage",new { id = 11})"><i class="mdi mdi-play"></i>@item.notebook_name</a></li>
                             }
 
 
@@ -191,8 +179,8 @@
                         {
 
                             <div class="card woman_parfume">
-                                <a href=""><img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap"></a>
-                                <a href="">@item.Name</a>
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})"><img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap"></a>
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})">@item.Name</a>
                                 <p>$&nbsp;@item.Price</p>
                             </div>
                         }
@@ -226,3 +214,74 @@
         </div>
     </section>
 </div>
+
+
+
+
+@*EV ESHYALARI*@
+<div class="parfume-new">
+    <section class="pt-5">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-sm-12 col-md-3 col-lg-3 col-lg-3 col-xl-3 woman pt-2">
+                    <div class=" text-center pt-5"><a href="">Ev Əşyaları</a></div>
+                    <div class="pt-5">
+                        <ul>
+                            @foreach (var item in Model.subMenus.Where(x=>x.MenuId==7))
+                            {
+                                <li><a href=""><i class="mdi mdi-play"></i>@item.Name</a></li>
+                            }
+
+
+                            @*@foreach (var item in Model.products.Where(x => x.ProductCategories.Any(y => y?.CategoryId == 43)))
+                                {
+                                    <li><a href=""><i class="mdi mdi-play"></i>@item.Name</a></li>
+                                }*@
+
+                            <li><a href=""><i class="mdi mdi-play"></i>View all</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-sm-none d-md-block col-md-9 col-md-9 col-lg-9">
+                    <div class="owl-carousel">
+                        @foreach (var item in Model.products.Where(x => x.ProductCategories.Any(y => y?.CategoryId == 47)))
+                        {
+
+                            <div class="card woman_parfume">
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})"><img class="card-img-top" src="/images/@item.MainImage" alt="Card image cap"></a>
+                                <a href="@Url.Action("index","singlePhone",new { id=item.Id})">@item.Name</a>
+                                <p>$&nbsp;@item.Price</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="owl-carousel">
+                        @*<div class="card woman_parfume">
+                                <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
+                                <a href="">Versace Medusa W Edp 30ml Spy</a>
+                                <p>$&nbsp;29</p>
+                            </div>
+                            <div class="card woman_parfume">
+                                <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
+                                <a href="">Versace Medusa W Edp 30ml Spy</a>
+                                <p>$&nbsp;29</p>
+                            </div>  <div class="card woman_parfume">
+                                <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
+                                <a href="">Versace Medusa W Edp 30ml Spy</a>
+                                <p>$&nbsp;29</p>
+                            </div>  <div class="card woman_parfume">
+                                <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
+                                <a href="">Versace Medusa W Edp 30ml Spy</a>
+                                <p>$&nbsp;29</p>
+                            </div>  <div class="card woman_parfume">
+                                <a href=""><img class="card-img-top" src="/img/parf.jpg" alt="Card image cap"></a>
+                                <a href="">Versace Medusa W Edp 30ml Spy</a>
+                                <p>$&nbsp;29</p>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

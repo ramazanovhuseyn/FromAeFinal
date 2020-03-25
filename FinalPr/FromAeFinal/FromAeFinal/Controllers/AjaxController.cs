@@ -15,8 +15,8 @@ namespace FromAeFinal.Controllers
         }
         public async Task<IActionResult> GetCategoriesById(int id)
         {
-            var cats = await dbContext.Categories.Where(w => w.SubMenuId == id).ToListAsync();
-            return PartialView("_Category",cats);
+            var data = await dbContext.Categories.Where(w => w.SubMenuId == id).ToListAsync();
+            return PartialView("_Category",data);
         }
     }
 }
