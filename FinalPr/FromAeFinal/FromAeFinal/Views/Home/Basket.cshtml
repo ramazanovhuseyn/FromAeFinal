@@ -1,0 +1,39 @@
+﻿@model List<BasketProVM>
+@{
+    ViewData["Title"] = "Basket";
+}
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <img src="/images/@item.MainImage" width="200px" height="180px"/>
+                            </td>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                            <td>@item.Count</td>
+                          
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
