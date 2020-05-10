@@ -52,6 +52,7 @@
                 <div class="card-body">
                     <a href="@Url.Action("index","singlePhone",new { id=item.Id})" class="card-title">@item.Name</a>
                     <p>$ @item.Price</p>
+                    <a asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id">Add To Cart</a>
                 </div>
             </div>
 

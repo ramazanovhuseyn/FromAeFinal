@@ -29,6 +29,7 @@ namespace FromAeFinal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
             services.AddControllersWithViews();
             services.AddControllers();
             services.AddIdentity<AppUser, IdentityRole<int>>()
@@ -52,8 +53,9 @@ namespace FromAeFinal
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
+          
             //image
             app.UseStaticFiles(new StaticFileOptions()
             {

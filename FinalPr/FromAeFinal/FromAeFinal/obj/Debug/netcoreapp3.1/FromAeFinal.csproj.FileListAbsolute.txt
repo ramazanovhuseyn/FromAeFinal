@@ -234,3 +234,4 @@ C:\Users\Code\source\repos\FromAeFinal\FromAeFinal\obj\Debug\netcoreapp3.1\Razor
 C:\Users\Code\source\repos\FromAeFinal\FromAeFinal\obj\Debug\netcoreapp3.1\Razor\Views\CategoriesPage\Index.cshtml.g.cs
 C:\Users\Code\source\repos\FromAeFinal\FromAeFinal\obj\Debug\netcoreapp3.1\Razor\Views\ProductsPage\Index.cshtml.g.cs
 C:\Users\Code\source\repos\FromAeFinal\FromAeFinal\obj\Debug\netcoreapp3.1\FromAeFinal.csprojAssemblyReference.cache
+C:\Users\Code\source\repos\FromAeFinal\FromAeFinal\obj\Debug\netcoreapp3.1\Razor\Views\Home\Basket.cshtml.g.cs
